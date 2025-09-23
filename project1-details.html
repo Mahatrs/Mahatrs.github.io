@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 1 - TurtleBot2 Navigation</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background: #0a192f !important;
+      background-size: initial !important;
+      animation: none !important;
+    }
+
+    .project-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #caf0f8;
+    }
+
+    /* Video container responsive */
+    .project-video {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 ratio */
+      height: 0;
+      margin-bottom: 2rem;
+    }
+
+    .project-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00e5ff44;
+    }
+
+    .project-container h1 {
+      color: #00e5ff;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .project-container h2 {
+      color: #00e5ff;
+      margin-top: 2rem;
+    }
+
+    .project-container p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
+
+    .project-image {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 10px;
+      margin: 2rem auto;
+      display: block;
+      box-shadow: 0 0 15px #00e5ff33;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: transparent;
+      border: 2px solid #00e5ff;
+      color: #a0e7ff;
+      padding: 0.6rem 1.4rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: #00e5ff;
+      color: #0a192f;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="top-banner">
+    <div class="banner-content">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About me</a>
+        <a href="projects.html">My projects</a>
+        <a href="cvmaha.pdf" target="_blank">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="project-container">
+    <!-- Video YouTube -->
+    <div class="project-video">
+      <iframe 
+        src="https://www.youtube.com/embed/cLh1mmnh-aM" 
+        title="Autonomous Navigation with TurtleBot2 & ROS"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <h1>Autonomous Navigation with TurtleBot2 & ROS</h1>
+
+    <p>
+      In this project, we utilized the TurtleBot2 platform and the ROS system to develop an autonomous navigation system. The TurtleBot2 is equipped with various sensors, including bumpers and LIDAR, which allow it to gather real-time data about its environment. The primary objective was to design a finite state machine capable of managing the robot's behaviors based on detected obstacles.
+    </p>
+
+    <h2>Project Iterations</h2>
+
+    <h3>1. Obstacle Detection with Bumpers</h3>
+    <p>
+      In this phase, the robot used contact sensors (bumpers) to detect obstacles. When an obstacle was detected, the robot would reverse and change direction. This iteration validated the basic mechanisms for obstacle detection and avoidance.
+    </p>
+
+    <img src="schema1.png" alt="Transition diagram with Bumper" class="project-image" />
+
+    <h3>2. Obstacle Avoidance with LIDAR</h3>
+    <p>
+      This phase introduced the use of LIDAR for more precise obstacle detection. The robot could detect obstacles at a greater distance and make more informed decisions to avoid them. Obstacle avoidance algorithms were developed and tested in a simulated environment.
+    </p>
+
+    <img src="schema2.png" alt="transition diagram with LIDAR" class="project-image" />
+
+    <h3>3. Improved Obstacle Avoidance with Odometry</h3>
+    <p>
+      The final phase involved integrating odometry data to enhance navigation accuracy. The robot could better estimate its position and orientation, optimizing obstacle avoidance algorithms and making the system more robust.
+    </p>
+
+    <h2>Results and Conclusions</h2>
+    <p>
+      The results demonstrated a significant improvement in the robot's autonomous navigation capabilities. By integrating various sensors and optimizing algorithms, the robot could navigate more smoothly and accurately in complex environments. This project validated the finite state machine approach for autonomous navigation and paved the way for future enhancements, such as integrating additional sensors and refining decision-making algorithms.
+    </p>
+
+    <!-- Back to Projects -->
+    <button class="back-btn" onclick="window.location.href='projects.html'">← Back to Projects</button>
+  </main>
+
+  <script src="lang.js"></script>
+</body>
+</html>

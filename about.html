@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me - Maha Touri</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background: #0a192f;
+      color: #a0e7ff;
+      padding-top: 100px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .about-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    h1, h2 {
+      color: #00e5ff;
+      margin-bottom: 0.8rem;
+    }
+
+    p, li {
+      line-height: 1.7;
+      font-size: 1.1rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .software-list, .certification-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .software-list li, .certification-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .software-list img,
+    .certification-list img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+    }
+
+    .certification-list img {
+      width: 280px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #00e5ff33;
+    }
+
+    .certification-list a {
+      color: #a0e7ff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .certification-list a:hover {
+      color: #00e5ff;
+    }
+    .certification-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* space between items */
+  justify-content: flex-start; /* or center */
+  padding: 0;
+}
+
+.certification-list li {
+  flex: 0 0 calc(50% - 1.5rem); /* two items per row */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.language-toggle .lang-btn.active {
+    background-color: #00e5ff;
+    color: #0a192f;
+  }
+
+.highlight {
+    color: #00e5ff;
+    font-weight: bold;
+  }
+.timeline-container {
+  position: relative; /* indispensable pour que ::before soit positionné correctement */
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background-color: #00e5ff;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+
+.timeline-item {
+  position: relative;
+  width: 50%; /* exact half */
+  padding: 0.3rem 1rem;
+  box-sizing: border-box;
+  z-index: 1; /* above the vertical line */
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: left;
+}
+
+.timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-item::before {
+  content: attr(data-year);
+  position: absolute;
+  top: 0.5rem;
+  font-weight: bold;
+  color: #00e5ff;
+  z-index: 2;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  width: 20px;
+  height: 3px;
+  background-color: #00e5ff;
+  z-index: 2;
+}
+
+.timeline-item.left::after {
+  right: -1px; /* connector to vertical line */
+}
+
+.timeline-item.right::after {
+  left: -1px; /* connector to vertical line */
+}
+
+/* Timeline content boxes */
+.timeline-content {
+  padding: 1rem;
+  background-color: #0a192f;
+  border: 2px solid #00e5ff;
+  border-radius: 8px;
+  color: #a0e7ff;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 3;
+}
+
+.timeline-content:hover {
+  border-color: #00ffff;
+  box-shadow: 0 0 15px #00e5ff80;
+  transform: translateY(-3px);
+}
+
+/* Mobile view */
+@media screen and (max-width: 768px) {
+  .timeline-item,
+  .timeline-item.left,
+  .timeline-item.right {
+    width: 100%;
+    left: 0 !important;
+    text-align: left;
+    padding-left: 3rem;
+  }
+
+  .timeline-item::after {
+    display: none;
+  }
+}
+
+.course-buttons {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+.course-btn {
+  background: none;
+  border: 4px solid #00e5ff;
+  color: #00e5ff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.course-btn:hover {
+  background: #00e5ff;
+  color: #0a192f;
+}
+.course-list {
+  list-style: none;
+  padding-left: 5rem;
+}
+.hidden {
+  display: none;
+}
+.course-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between logo and text */
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.btn-logo {
+  width: 150px; /* adjust size */
+  height: 90px;
+  object-fit: contain;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="top-banner">
+    <div class="banner-content">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About me</a>
+        <a href="projects.html">My projects</a>
+        <a href="cvmaha.pdf" target="_blank">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="about-container">
+
+    <section class="section">
+      <h1>About Me</h1>
+      <p>
+        I’m Maha Touri, a passionate Mechatronics and Robotics Engineering student with a strong focus on autonomous systems, embedded programming, and intelligent control. From a young age, I loved disassembling things in my dad’s workshop, fascinated by how they worked. That early curiosity blossomed into a deep desire to become an engineer. My interdisciplinary background spans mechanical, electrical, and software engineering, enabling me to design and develop real-world robotic systems that seamlessly integrate mechanical structures, sensor-driven logic, and embedded control.
+      </p>
+    </section>
+
+       <section class="section">
+      <h2>Software & Tools</h2>
+       <p class="skills-intro">
+    These are the key tools and frameworks I worked with during my robotics and engineering projects.
+  </p>
+      <ul class="software-list">
+        
+        <li><img src="icons/ros.png" alt="ROS" /> ROS (Robot Operating System)</li>
+           <li><img src="icons/rviz.png" alt="Rviz" /> Rviz</li>
+        <li><img src="icons/gazebo.png" alt="Gazebo" /> Gazebo</li>
+        <li><img src="icons/moveit.png" alt="MoveIt" /> MoveIt</li>
+        <li><img src="icons/linux.png" alt="Linux environment" /> Linux </li>
+        <li><img src="icons/python.png" alt="Python" /> Python</li>
+        <li><img src="icons/opencv.png" alt="OpenCV Library" /> OpenCv Library </li>
+        <li><img src="icons/scikit.png" alt="Scikit-learn Library" /> Scikit Learn Library </li>
+        <li><img src="icons/cpp.png" alt="C/C++" /> C / C++</li>
+        <li><img src="icons/mplab.png" alt="MPLAB" /> MPLAB</li>
+        
+        <li><img src="icons/solidworks.png" alt="SolidWorks" /> SolidWorks</li>
+        <li><img src="icons/catia.png" alt="Catia" /> Catia</li>
+        <li><img src="icons/fusion360.png" alt="Fusion 360" /> fusion360</li>
+        <li><img src="icons/arduino.png" alt="Arduino" /> Arduino IDE</li>
+     
+        
+        <li><img src="icons/matlab.png" alt="MATLAB" /> MATLAB / Simulink</li>
+        <li><img src="icons/github.png" alt="Git" /> Git / GitHub</li>
+        
+        
+        <li><img src="icons/labview.png" alt="MPLAB" /> LabVIEW</li>
+        <li><img src="icons/20 sim.png" alt="20-sim Bond Graph" /> 20-sim Bond Graph </li>
+        <li><img src="icons/eagle.png" alt="Eagle" /> Eagle </li>
+
+        <li><img src="icons/abaqus.avif" alt="Arduino" /> Abaqus</li>
+        <li><img src="icons/adams.png" alt="Arduino" /> Adams</li>
+      </ul>
+    </section>
+
+<section class="section">
+  <h2>My Academic journey</h2>
+  <div class="timeline-container">
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <span class="timeline-year"><h3>2020-2022: Preparatory Classes</h3></span>
+        <h4>Kenitra, Morocco</h4>
+        <p>Intensive training in mathematics, physics, and engineering sciences.</p>
+      </div>
+    </div>
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <span class="timeline-year"><h3>2022-2024: INSA Hauts-de-France Engineering School</h3></span>
+        <h4>Valenciennes, France</h4>
+        <p>Third and fourth year engineering student in Mechatronic Systems.</p>
+      </div>
+    </div>
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <span class="timeline-year"><h3>2023: Internship at the Instituto Militar de Engenharia</h3></span>
+        <h4>Rio de Janeiro, Brazil</h4>
+        <p>Worked on Yaskawa robotic arm programming and simulation for a manufacturing platform.</p>
+      </div>
+    </div>
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <span class="timeline-year"><h3>2024-2026: Seatech Engineering School</h3></span>
+        <h4>La Garde, France</h4>
+        <p>Double Degree in Mechatronic and Robotic Systems.</p>
+      </div>
+    </div>
+    <div class="timeline-item left" >
+      <div class="timeline-content">
+        <span class="timeline-year"><h3>2025: Internship at CRTA</h3></span>
+        <h4>Zagreb, Croatia</h4>
+        <p>Worked on KUKA robotic arm programming and simulation for a medical application.</p>
+      </div>
+    </div>
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <span class="timeline-year"><h3>2024-2026:  Robot Club Toulon</h3></span>
+        <h4>La Garde, France</h4>
+        <p>Member of the Robocup Middle Size League Team.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <h2>Courses</h2>
+  <div class="course-buttons">
+    <button class="course-btn" data-target="seatech-list">
+      <img src="logoseatech.png" alt="SEATECH Logo" class="btn-logo">
+      <h3>SEATECH Courses</h3>
+    </button>
+    <button class="course-btn" data-target="insa-list">
+      <img src="insa.jpg" alt="INSA Logo" class="btn-logo">
+      <h3>INSA Courses</h3>
+    </button>
+  </div>
+<ul id="seatech-list" class="course-list hidden"> 
+    <li>Vehicle Dynamics and Stability</li>
+    <li>ROS (Turtlebot)</li>
+    <li>Geometric and Kinematic Modeling of Robots (PUMA, DELTA, Industrial Arms)</li>
+    <li>Sensors and Actuators</li>
+    <li>Computer Vision</li>
+    <li>Instrumentation</li>
+    <li>Programming in C++ and JavaScript</li>
+    <li>CAD (SolidWorks)</li>
+</ul>
+
+  </ul>
+  <ul id="insa-list" class="course-list hidden">
+    <li>Digital Electronics</li>
+    <li>Microcontroller Engineering (8051, Assembly Language)</li>
+    <li>Automatic Control</li>
+    <li>Servomechanism Design</li>
+    <li>Modeling and Simulation of Mechatronic Systems (Bond Graph)</li>
+    <li>Programming in C and Python</li>
+    <li>CAD (CATIA)</li>
+    
+  </ul>
+ 
+
+    <section class="section">
+      <h2>Certifications</h2>
+      <ul class="certification-list">
+        <li>
+          <a href="Coursera AN5C3ABCDLEV.pdf" target="_blank">
+            <img src="courseraibm1.png" alt="ROS Certificate" class="centered-image" />
+            Introduction to AI – Coursera (IBM)
+          </a>
+        </li>
+        <li>
+          <a href="Coursera P5Q2CSYE4HP2.pdf" target="_blank">
+            <img src="courseraibm2.png" alt="Python Certificate" class="centered-image" />
+            Building AI Powered Chatbots Without programming – Coursera (IBM)
+          </a>
+        </li>
+        <li>
+          <a href="Toeic.pdf" target="_blank">
+            <img src="Toeic.jpg" alt="Toeic Certificate" class="centered-image" />
+            TOEIC 
+          </a>
+        </li>
+        <li>
+          <a href="ml.pdf" target="_blank">
+            <img src="ml.png" alt="Embedded Certificate" class="centered-image" />
+            Machine learning in Python with scikit-learn (Inria) – FUN MOOC
+          </a>
+        </li>
+      </ul>
+    </section>
+
+  
+</section>
+
+
+    <section class="section">
+      <h2>Languages</h2>
+      <ul>
+        <li><strong>Arabic:</strong> Native</li>
+        <li><strong>French:</strong> Native</li>
+        <li><strong>English:</strong> Fluent</li>
+        <li><strong>Spanish:</strong> Intermediate</li>
+        
+      </ul>
+    </section>
+
+  </main>
+
+  <script src="lang.js"></script>
+
+  <script>
+document.querySelectorAll('.course-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.course-list').forEach(list => list.classList.add('hidden'));
+    document.getElementById(btn.dataset.target).classList.toggle('hidden');
+  });
+});
+</script>
+
+</body>
+</html>

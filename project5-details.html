@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 5 – Image Processing & Remote Sensing</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background: #0a192f;
+      background-size: initial;
+      animation: none;
+      color: #a0e7ff;
+      padding-top: 100px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .project-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .project-container h1, h2 {
+      color: #00e5ff;
+    }
+
+    .project-container p, li {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    ul {
+      padding-left: 1.4rem;
+      margin-bottom: 2rem;
+    }
+
+    .project-image {
+      width: 100%;
+      max-width: 700px;
+      display: block;
+      margin: 2rem auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00e5ff55;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #00e5ff;
+      color: #0a192f;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #00bcd4;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="top-banner">
+    <div class="banner-content">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About me</a>
+        <a href="projects.html">My projects</a>
+        <a href="cvmaha.pdf" target="_blank">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="project-container">
+    <h1>Image Processing and Remote Sensing Applications</h1>
+
+    <h2>Context</h2>
+    <p>
+      This project was carried out during my studies at Seatech and focused on applying image processing and remote sensing techniques to real-world challenges across three domains: industrial object counting, agricultural monitoring, and underwater seabed classification.
+    </p>
+
+    <h2> Industrial Vision for Object Counting</h2>
+    <p><strong>Goal:</strong> Develop an algorithm to detect and count objects in industrial images automatically.</p>
+
+    <ul>
+      <li>Loaded and displayed images using OpenCV</li>
+       <img src="cavic1.png" alt="Object Counting Example" class="centered-image" />
+      <li>Converted color images to grayscale</li>
+      <li>Used histogram analysis for pixel intensity distribution</li>
+       <img src="cavic2.png" alt="Object Counting Example" class="centered-image" />
+      <li>Applied binarization for background separation</li>
+      <img src="cavic3.png" alt="Object Counting Example" class="centered-image" />
+      <li>Calibrated object area and performed counting on new images</li>
+       <img src="cavic4.png" alt="Object Counting Example" class="centered-image" />
+    </ul>
+
+    
+
+   
+    <h2> Remote Sensing for Agricultural Monitoring</h2>
+    <p><strong>Goal:</strong> Analyze drone-captured multispectral images to monitor sugar beet crop growth.</p>
+
+    <ul>
+      <li>Loaded and visualized six spectral bands</li>
+      <img src="cavic6.png" alt="Object Counting Example" class="centered-image" />
+      <li>Created true/false color composites</li>
+      <img src="cavicfv.png" alt="Object Counting Example" class="centered-image" />
+      <li>Analyzed spectral profiles of vegetation and soil</li>
+      <li>Calculated NDVI for vegetation health</li>
+      <img src="cavic7.png" alt="Object Counting Example" class="centered-image" />
+      <li>Performed temporal comparisons to evaluate growth</li>
+      <img src="cavic8.png" alt="Object Counting Example" class="centered-image" />
+      <li>Computed cultivated area proportions over time</li>
+      <img src="cavic9.png" alt="Object Counting Example" class="centered-image" />
+    </ul>
+
+
+    <h2>Underwater Mapping using Submarine Images</h2>
+    <p><strong>Goal:</strong> Map the seabed by classifying underwater images using spectral and supervised learning techniques.</p>
+
+    <ul>
+      <li>Analyzed underwater spectral bands</li>
+      <img src="cavic10.png" alt="Object Counting Example" class="centered-image" />
+      <li>Visualized band combinations for interpretation</li>
+      <img src="cavic11.png" alt="Object Counting Example" class="centered-image" />
+      <li>Applied Euclidean Distance and Spectral Angle Mapper (SAM)</li>
+      <li>Compared classification results for accuracy</li>
+      <div class="image-row">
+        <img src="caviceucli.png" alt="Object Counting Example" class="half-image" />
+        <img src="cavicsam.png" alt="Object Counting Example" class="half-image" />
+      </div>
+
+      
+    </ul>
+
+
+
+    <h2>Results & Learning Outcomes</h2>
+    <p>
+      This project allowed me to explore and apply advanced image processing and remote sensing techniques to solve domain-specific problems. I gained hands-on experience using Python, OpenCV, and data visualization libraries. From counting objects in factory scenes to mapping agricultural plots and marine habitats, this work demonstrated how image-based analysis supports innovation across industrial, agricultural, and environmental sectors.
+    </p>
+
+    <!-- Back to Projects -->
+    <a href="projects.html" class="back-button">← Back to Projects</a>
+  </div>
+
+  <script src="lang.js"></script>
+</body>
+</html>

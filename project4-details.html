@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 4 – Autonomous Mobile Robot</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background: #0a192f;
+      background-size: initial;
+      animation: none;
+    }
+    .project-container {
+      max-width: 900px;
+      margin: 6rem auto 2rem;
+      padding: 2rem;
+      color: #a0e7ff;
+    }
+    .project-container img {
+      width: 60%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00e5ff66;
+      margin: 1.5rem auto;
+      display: block;
+    }
+    h1, h2 {
+      color: #00e5ff;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #00e5ff;
+      color: #0a192f;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+    .back-button:hover {
+      background-color: #00bcd4;
+    }
+.project-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* ratio 16:9 */
+  height: 0;
+  margin-bottom: 2rem;
+}
+
+.project-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00e5ff44;
+}
+
+  </style>
+</head>
+<body>
+  <header class="top-banner">
+    <div class="banner-content">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About me</a>
+        <a href="projects.html">My projects</a>
+        <a href="cvmaha.pdf" target="_blank">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="project-container">
+      <div class="project-video">
+      <iframe 
+        src="https://www.youtube.com/embed/H4_b7WDV3kU" 
+        title="Autonomous Navigation with TurtleBot2 & ROS"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <h1>Autonomous Mobile Robot Using a 16-bit Microcontroller</h1>
+
+    <h2>Project Overview</h2>
+    <p>
+      This project was carried out at SeaTech Engineering School as part of a practical course on embedded systems and mobile robotics. The main objective was to program a mobile robot capable of operating autonomously using a 16-bit microcontroller. While the mechanical and electronic platform was already provided, my role focused on programming the robot’s core behavior using MPLAB and the C programming language.
+    </p>
+
+    <h2>Key Technologies Used</h2>
+    <ul>
+      <li>MPLAB IDE (Microchip)</li>
+      <li>dsPIC33EP512MU814 (16-bit microcontroller)</li>
+      <li>Timers and interrupts</li>
+      <li>PWM for motor control</li>
+      <li>Analog-to-Digital Conversion (ADC)</li>
+      <li>Infrared distance sensors (GP2Y0A21YK0F)</li>
+      <li>State machine with GRAFCET-style logic</li>
+    </ul>
+
+    <img src="robotgies.png" alt="Autonomous Robot System" />
+
+    <h2>System Programming</h2>
+    <p>
+      Using MPLAB, I programmed the robot in embedded C with a modular, event-driven structure. The dsPIC33EP handled real-time tasks using timers and interrupts, ensuring consistent behavior and accurate reaction to sensor inputs and motion control commands.
+    </p>
+
+    <h2>Motor Control</h2>
+    <p>
+      The robot’s motors were driven through an H-bridge, controlled by PWM signals. I implemented acceleration ramps to gradually change the PWM duty cycle, ensuring smooth and precise motion without jerks or skidding.
+    </p>
+
+    <img src="carte.png" alt="Motor Control Circuit" />
+
+    <h2>Sensor Integration</h2>
+    <p>
+      The robot used five infrared distance sensors. I configured the ADC to convert analog signals to digital values, which were processed to estimate object distances in real time. These values were critical for the obstacle avoidance logic.
+    </p>
+
+    <img src="graph.png" alt="Sensor Distance Graph" />
+
+    <h2>Autonomous Behavior</h2>
+    <p>
+      A structured state machine governed the robot’s actions, with each state reacting to real-time sensor input. The robot could move forward, turn, or stop depending on its environment. The logic was inspired by GRAFCET flow diagrams and implemented using conditional transitions and sensor thresholds.
+    </p>
+
+    <h2>Final Outcome</h2>
+    <p>
+      Once started, the robot operated autonomously for one minute, analyzing its surroundings and navigating while avoiding obstacles. LEDs on the chassis provided visual feedback for obstacle detection. This project effectively demonstrated the integration of microcontroller programming, sensor data processing, and control logic into a fully functional robotic system.
+     <h2><a href="https://github.com/Mahatrs/SeaTech_Touri_Maha.git" target="_blank" rel="noopener noreferrer">🔗 Source code on GitHub</a></h2>
+    </p>
+
+    <!-- Back Button -->
+    <a href="projects.html" class="back-button">← Back to Projects</a>
+</main>
+</body>
+</html>

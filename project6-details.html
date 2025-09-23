@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 6 – YOLOv8 Object Detection on JeVois Pro</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background: #0a192f;
+      background-size: initial;
+      animation: none;
+      color: #a0e7ff;
+      padding-top: 100px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .project-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .project-container h1, h2 {
+      color: #00e5ff;
+    }
+
+    .project-container p, li {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    ul {
+      padding-left: 1.4rem;
+      margin-bottom: 2rem;
+    }
+
+    .project-image {
+      display: block;
+      margin: 2rem auto;
+      width: 40%;
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00e5ff55;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #00e5ff;
+      color: #0a192f;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #00bcd4;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="top-banner">
+    <div class="banner-content">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About me</a>
+        <a href="projects.html">My projects</a>
+        <a href="cvmaha.pdf" target="_blank">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="project-container">
+    <h1>YOLOv8 Object Detection on JeVois Pro Camera</h1>
+
+    <h2> Context</h2>
+    <p>
+      As part of my work with the RoboCup club, I contributed to enhancing the visual perception capabilities of our autonomous robots. This project involved implementing the YOLOv8 object detection model on the JeVois Pro smart camera. This implementation included data collection, image labeling, model training, conversion to a compatible format, and deployment on the camera..
+    </p>
+
+    <h2> Image Labeling</h2>
+    <p><strong>Goal:</strong> Build a labeled dataset to train the YOLOv8 model.</p>
+    <ul>
+      <li>Captured images using the JeVois Pro camera and a custom Python script</li>
+      <li>Labeled images using DeepLabel (bounding boxes + class IDs)</li>
+      <li>Used GitHub Desktop for version control and collaboration</li>
+    </ul>
+    
+    <img src="yololabeling.png" alt="Image Labeling Example" class="centered-image" />
+
+    <h2> Model Training</h2>
+    <p><strong>Goal:</strong> Train the YOLOv8 object detection model to detect custom classes.</p>
+    <ul>
+      <li>Used PyTorch and the Ultralytics package</li>
+      <li>Organized data and defined the structure</li>
+      <li>Trained YOLOv8 using custom parameters: epochs, batch size, input size, and GPU support</li>
+    </ul>
+
+    <h2> Model Conversion</h2>
+    <p><strong>Goal:</strong> Convert and deploy the trained model on the JeVois Pro camera.</p>
+    <ul>
+      <li>Exported the trained YOLOv8 model to ONNX format</li>
+      <li>Installed and ran the Hailo Software Suite using Docker on Ubuntu</li>
+      <li>Converted the ONNX model to .hef format compatible with JeVois Pro</li>
+    </ul>
+    
+ <img src="yolov8percept.png" alt="JeVois Output" class="centered-image" />
+
+    <h2>Conclusion</h2>
+    <p>
+      This project provided end-to-end experience in real-time computer vision, including dataset creation, model training, conversion, and embedded deployment. It strengthened my skills in image labeling, YOLOv8 training, and deploying deep learning models to constrained hardware like JeVois Pro.
+    </p>
+
+    <!-- Back to Projects -->
+    <a href="projects.html" class="back-button">← Back to Projects</a>
+  </div>
+
+  <script src="lang.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 10 – PRONOBIS Robotic Assistance</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background: #0a192f;
+      background-size: initial;
+      animation: none;
+    }
+    .project-container {
+      max-width: 900px;
+      margin: 6rem auto 2rem;
+      padding: 2rem;
+      color: #a0e7ff;
+    }
+    .project-container img {
+      width: 60%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00e5ff66;
+      margin: 1.5rem auto;
+      display: block;
+    }
+    h1, h2, h3 {
+      color: #00e5ff;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+.project-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* ratio 16:9 */
+  height: 0;
+  margin-bottom: 2rem;
+}
+
+.project-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00e5ff44;
+}
+    .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #00e5ff;
+      color: #0a192f;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+    .back-button:hover {
+      background-color: #00bcd4;
+    }
+  </style>
+</head>
+<body>
+  <header class="top-banner">
+    <div class="banner-content">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About me</a>
+        <a href="projects.html">My projects</a>
+        <a href="cvmaha.pdf" target="_blank">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+<div class="project-container">  
+
+      <div class="project-video">
+      <iframe 
+        src="https://www.youtube.com/embed/oU66ILJI_Zw" 
+        title="Autonomous Navigation with TurtleBot2 & ROS"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+<h2>Internship Project – PRONOBIS: Robotic Assistance for Prostate Interventions</h2>
+
+<p>
+As part of the research project <strong>PRONOBIS</strong>, my internship at CRTA focused on 
+developing and evaluating <strong>robot-assisted solutions for prostate ultrasound planning and biopsy
+automation</strong>. 
+The goal was to ensure safe and precise interventions by optimizing robot–patient positioning, 
+anticipating involuntary patient motions, and implementing adaptive tracking strategies. 
+Using the <strong>KUKA LBR iiwa 14</strong> and the <strong>KUKA Med 7</strong> robots, I explored kinematic analysis, manipulability, and motion feasibility 
+to guarantee reliable performance during medical interventions.
+</p>
+
+<h3>🔹 Phase 1 – Kinematic & Safety Analysis</h3>
+As a first step, I carried out a detailed kinematic analysis of the KUKA LBR iiwa 14 robot to 
+evaluate its suitability for prostate interventions. This included studying both forward and
+inverse kinematics in order to establish the relationship between joint configurations and 
+the end-effector position/orientation. Using Python and MATLAB Simulink, I analyzed the Denavit–Hartenberg parameters, computed the Jacobian matrix, and explored different methods for calculating and identifying singularities,
+ensuring safe and efficient robot operation during medical procedures.
+
+
+<h3>🔹 Phase 2 – Mechanical Feasibility and Reachability analysis</h3>
+<p>
+To assess the mechanical feasibility and reachability of the KUKA robot during prostate interventions, 
+I conducted an in-depth analysis combining simulation and algorithmic methods. Using the Reach ROS2 package, 
+I generated reachability maps to visualize the robot’s dexterous workspace and identify optimal regions for 
+safe operation. 
+<img src="crta1.png" alt="Feasibility evaluation" width="600"/>
+To refine patient–robot positioning, I applied a genetic algorithm that optimized placement while 
+avoiding singularities and joint-limit risks. 
+<img src="crta2.png" alt="Feasibility evaluation" width="600"/>
+
+In parallel, I developed a Python script that modeled the patient’s 
+involuntary movements as a cuboid volume and evaluated whether the robot could safely follow these motions without
+losing manipulability or entering unsafe configurations.
+</p>
+<img src="crta3.png" alt="Feasibility evaluation" width="600"/>
+
+<h3>🔹 Phase 3 – Patient mouvement simulation with the KUKA Med 7 & Patient Motion Tracking</h3>
+<p></p>
+For patient motion simulation and tracking, I used the KUKA LBR Med 7 robot to replicate involuntary movements 
+such as breathing and minor prostate shifts. A mechanical support designed in SolidWorks and 3D-printed held the 
+phantom securely while allowing controlled motion. Using ROS2 nodes, I generated translations and rotations in 
+simulation (RViz) and on real hardware. The main KUKA LBR iiwa 14 robot employed torque sensors to measure interaction forces 
+and feed them into a ForceCompensationNode, a PI-controller-based strategy in ROS2 that adaptively corrected the 
+robot’s end-effector position in real time. This allowed the system to track patient motion precisely without 
+external sensors, ensuring safe and accurate intervention throughout the procedure.
+</p>
+<img src="crta4.png" alt="3D visualization" width="600"/>
+<img src="two robots.jpg" alt="3D visualization" width="600"/>
+
+<h3>Outcome</h3>
+<p>
+Through my work, I enabled the robot to safely follow patient-specific involuntary movements for real-time 
+adaptive control. I also helped optimize robot placements using reachability maps and genetic algorithms 
+to avoid singularities and joint-limit risks, ensuring safe and precise operation. 
+This experience allowed me to gain hands-on expertise in manipulating KUKA robots, ROS2 programming, 
+and working in a medical research environment, while understanding the critical role of precision and safety in robot-assisted prostate interventions.
+</p>
+<a href="projects.html" class="back-button">← Back to Projects</a>
+</div>
+</body>
+</html>

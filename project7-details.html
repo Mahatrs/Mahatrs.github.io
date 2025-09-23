@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 5 – Noise-Activated LED Circuit</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background: #0a192f;
+      background-size: initial;
+      animation: none;
+    }
+    .project-container {
+      max-width: 900px;
+      margin: 6rem auto 2rem;
+      padding: 2rem;
+      color: #a0e7ff;
+    }
+    .project-container img {
+      width: 60%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00e5ff66;
+      margin: 1.5rem auto;
+      display: block;
+    }
+    h1, h2 {
+      color: #00e5ff;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #00e5ff;
+      color: #0a192f;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+    .back-button:hover {
+      background-color: #00bcd4;
+    }
+  </style>
+</head>
+<body>
+  <header class="top-banner">
+    <div class="banner-content">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About me</a>
+        <a href="projects.html">My projects</a>
+        <a href="cvmaha.pdf" target="_blank">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <div class="project-container">
+
+    <h1>Noise-Activated LED Circuit</h1>
+
+    <h2>Project Overview</h2>
+    <p>
+      This project consisted of analyzing a predefined schematic, designing and optimizing the PCB on Eagle, and then assembling it on a real board. 
+      The system uses a microphone to detect sound and lights up a LED when a noise is detected. It combined circuit analysis, PCB design, 
+      practical soldering, and debugging into a complete workflow from schematic to functional prototype.
+    </p>
+
+    <h2>Key Functions of the Circuit</h2>
+    <ul>
+      <li><strong>Power Supply:</strong> Provides 9V to all components.</li>
+      <li><strong>Control Section:</strong> Push-button to start/stop the circuit.</li>
+      <li><strong>Monostable Circuit:</strong> Generates a temporary pulse when triggered.</li>
+      <li><strong>High-Pass Filter:</strong> Processes microphone input to detect noise variations.</li>
+      <li><strong>RS Flip-Flop:</strong> Stores the detection state as memory.</li>
+      <li><strong>Power Stage:</strong> Drives the relay and LED using a transistor and protection diode.</li>
+    </ul>
+
+    <img src="schemaelec.png" alt="Electrical Schematic" />
+    
+    
+    
+
+    <h2>Implementation</h2>
+    <p>
+      After analyzing the schematic, I reproduced it on Eagle CAD, optimizing the routing between components for signal clarity and minimal interference. I then designed the board layout, 
+      placing and arranging the components in a practical manner for manufacturing and soldering.
+      <img src="TP 2 Eagle2.jpg" alt="PCB Layout in Eagle" />
+      Using the PCB design, I transferred the circuit onto a real board. I soldered all the components, carefully checking the connections to avoid short circuits and ensure functionality.
+      <img src="mahasouadage.jpg" alt="Soldering the Circuit" style="width:40%; display:block; margin:1rem auto; border-radius:12px; box-shadow:0 0 15px #00e5ff66;"/>
+    </p>
+
+    <h2>Final Outcome</h2>
+    <p>
+      Once assembled, the circuit was tested step by step: verifying power supply, checking the monostable pulse with an oscilloscope, validating the filter response, 
+      and confirming the LED activation when the microphone detected a sound input.
+      <img src="cartebphi.jpg" alt="Final Assembled Circuit" />
+    </p>
+
+    <!-- Back Button -->
+    <a href="projects.html" class="back-button">← Back to Projects</a>
+  </div>
+
+</body>
+</html>

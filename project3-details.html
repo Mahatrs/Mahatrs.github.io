@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 3 – Cooperative USV/ROV System</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background: #0a192f;
+      background-size: initial;
+      animation: none;
+    }
+    .project-container {
+      max-width: 900px;
+      margin: 6rem auto 2rem;
+      padding: 2rem;
+      color: #a0e7ff;
+    }
+    .project-container img {
+      width: 60%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00e5ff66;
+      margin: 1.5rem 0;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h1, h2 {
+      color: #00e5ff;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #00e5ff;
+      color: #0a192f;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+    .back-button:hover {
+      background-color: #00bcd4;
+    }
+  </style>
+</head>
+<body>
+  <header class="top-banner">
+    <div class="banner-content">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About me</a>
+        <a href="projects.html">My projects</a>
+        <a href="cvmaha.pdf" target="_blank">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="project-container">
+    <h1>Cooperative USV/ROV Cable Winding System</h1>
+
+    <h2>Project Overview</h2>
+    <p>
+      This project was part of a final group year project during my first year at Seatech, focused on developing a cooperative system between an Unmanned Surface Vehicle (USV) and a Remotely Operated Vehicle (ROV) connected by a communication cable. The objective was to increase the ROV’s operational range for tasks such as underwater mapping, inspection, and data collection by pairing it with a USV. While my two team members handled other subsystems of the USV, my primary responsibility was improving the cable winding system.
+    </p>
+    <img src="rap1.png" alt="Initial winding system" />
+
+    <h2>Diagnosis and Repair</h2>
+    <ul>
+      <li><strong>Establishing Specifications:</strong> We first defined a comprehensive set of technical specifications to guide the repair and redesign process for both USV and ROV components.</li>
+      <li><strong>Component Replacement:</strong> After diagnosing the system, we identified that one of the two Base Electronic Speed Controllers (ESC) was faulty. We proceeded to replace it with a new, compatible component. This involved uninstalling the old module, verifying electrical connections, and securely installing the new ESC.</li>
+    </ul>
+    <img src="image cablage.jpg" alt="Initial winding system" />
+
+    <h2>Optimization of the Cable Winding System</h2>
+
+    <p><strong>Initial System Assessment:</strong></p>
+    <p>
+      The original cable winding system suffered from poor cable guidance and ineffective tension control. The tension mechanism used 3D-printed parts to mount bearings, which led to excessive friction and misalignment. Additionally, testing conditions caused motor overheating and structural deformation, further impacting system precision and reliability.
+    </p>
+    <img src="img2.png" alt="Initial winding system" />
+
+    <p><strong>Tension Module Redesign:</strong></p>
+    <ul>
+      <li>I designed a machined metal support for the bearings, significantly improving rigidity and axial alignment.</li>
+      <li>To hold the encoder and internal bearings securely, I developed a 3D-printed support structure that contributed to overall system stability.</li>
+    </ul>
+    <img src="img4.png" alt="Tension module upgrade" />
+
+    <p><strong>Cable Guidance Enhancement:</strong></p>
+    <ul>
+      <li>Initial tests with U-shaped pulleys revealed issues with maintaining cable position, particularly during vertical movements.</li>
+      <li>As an alternative, I created a new system using two parallel rollers for smoother rotation and improved cable control. A protective cap was added to prevent accidental cable dislodgment during operation.</li>
+    </ul>
+    <img src="img3.png" alt="Improved cable guidance" />
+
+    <h2>Results and Conclusions</h2>
+    <p>
+      The final design of the tension module incorporated all improvements from iterative design processes. It featured 11 3D-printed parts, including rollers, safety caps, an encoder support, and a roller chassis for the winding module. A machined metal piece ensured rigid and perfectly aligned bearing support, facilitating smooth and reliable transmission. The system is modular, compact, and designed for future integration of position sensors and dynamic control.
+    </p>
+    <img src="img5.png" alt="Final cable system design" />
+    <img src="finale1.jpg" alt="Final cable system design" />
+
+    <!-- Back to projects button -->
+    <a href="projects.html" class="back-button">← Back to Projects</a>
+  </div>
+
+</body>
+</html>

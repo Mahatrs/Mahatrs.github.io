@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maha Touri - Robotics Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ------------------------------
+       Global Styles
+    ------------------------------ */
+
+ body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(-60deg, #0a192f, #1c3a5a, #004e7c, #0a192f);
+  background-size: 400% 400%;
+  animation: vividGradient 8s ease-in-out infinite;
+  color: #a0e7ff;
+}
+@keyframes vividGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+    /* ------------------------------
+       Top Banner
+    ------------------------------ */
+
+    .top-banner {
+      background-color: rgba(5, 25, 55, 0.95);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 10px rgba(0, 229, 255, 0.2);
+    }
+
+    .banner-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #a0e7ff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #00e5ff;
+    }
+
+    /* ------------------------------
+       Language Toggle (in banner)
+    ------------------------------ */
+
+    .language-toggle {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: 1px solid #00e5ff;
+      color: #a0e7ff;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+      font-weight: bold;
+    }
+
+    .lang-btn.active,
+    .lang-btn:hover {
+      background: #00e5ff;
+      color: #0a192f;
+    }
+
+    /* ------------------------------
+       Other Content Styles
+    ------------------------------ */
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+  .name {
+    font-size: 3rem; /* Larger name */
+    color: #00e5ff;
+    margin-bottom: 0.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem; /* Smaller title */
+    color: #a0e7ff;
+    margin-bottom: 1rem;
+  }
+
+
+    hr.line {
+      border: 0;
+      height: 2px;
+      background: #00e5ff;
+      margin: 1rem auto 2rem;
+      width: 50%;
+      box-shadow: 0 0 10px #00e5ff88;
+    }
+
+    p.description {
+      font-size: 1.1rem;
+      color: #caf0f8;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .custom-btn {
+      padding: 0.7rem 1.8rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      border: 2px solid #00e5ff;
+      background: transparent;
+      color: #a0e7ff;
+      transition: all 0.3s ease;
+    }
+
+    .custom-btn.outline:hover {
+      background: #00e5ff;
+      color: #0a192f;
+    }
+
+    .custom-btn.neon {
+      box-shadow: 0 0 8px #00e5ff, 0 0 20px #00e5ff88;
+    }
+
+    .custom-btn.neon:hover {
+      box-shadow: 0 0 12px #00e5ff, 0 0 30px #00e5ffcc;
+      background: #00e5ff;
+      color: #0a192f;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="top-banner">
+    <div class="banner-content">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About me</a>
+        <a href="projects.html">My projects</a>
+        <a href="cvmaha.pdf" target="_blank">Resume</a>
+        <a href="contact.html">Contact</a>
+        
+      </nav>
+      
+    </div>
+  </header>
+
+<div class="center-wrapper">
+  <div class="text-content">
+    <h2 class="name fade-slide">Maha Touri</h2>
+    <h1 class="title fade-slide">Robotics and Mechatronics Engineering Student</h1>
+    <hr class="line fade-slide" />
+    <p class="description fade-slide">
+      Welcome, and thank you for visiting my website !<br />
+Whether you're a recruiter, fellow engineer student, or simply curious about my work, I invite you to explore my projects and experience, and I hope you find the content both relevant and insightful.
+    </p>
+    <div class="buttons fade-slide">
+      <button class="custom-btn outline"onclick="window.open('cvmaha.pdf', '_blank')">View Resume</button>
+      <button class="custom-btn neon" onclick="window.location.href='projects.html'">My Projects</button>
+    </div>
+    
+  </div>
+
+  <div class="image-content fade-slide">
+    <img src="IMG_3014.JPG" alt="Maha Touri" />
+  </div>
+</div>
+
+
+  <script src="lang.js"></script>
+
+</body>
+</html>

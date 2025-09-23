@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 2 - Digital Twin for CIM System</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+
+  body {
+    background: #0a192f !important;
+    background-size: initial !important;
+    animation: none !important;
+  }
+
+    .project-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #caf0f8;
+    }
+
+.project-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* ratio 16:9 */
+  height: 0;
+  margin-bottom: 2rem;
+}
+
+.project-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00e5ff44;
+}
+
+
+    .project-container h1 {
+      color: #00e5ff;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .project-container h2 {
+      color: #00e5ff;
+      margin-top: 2rem;
+    }
+
+    .project-container p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
+
+    .project-image {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 10px;
+      margin: 2rem auto;
+      display: block;
+      box-shadow: 0 0 15px #00e5ff33;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: transparent;
+      border: 2px solid #00e5ff;
+      color: #a0e7ff;
+      padding: 0.6rem 1.4rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: #00e5ff;
+      color: #0a192f;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="top-banner">
+    <div class="banner-content">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About me</a>
+        <a href="projects.html">My projects</a>
+        <a href="cvmaha.pdf" target="_blank">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="project-container">
+
+    <!-- Project Video -->
+      <div class="project-video">
+      <iframe 
+        src="https://www.youtube.com/embed/BLItEN6YwZQ" 
+        title="Autonomous Navigation with TurtleBot2 & ROS"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <h1>Internship Project – Digital Twin of a CIM System Using ROS</h1>
+
+    <h2>Context and Objectives</h2>
+    <p>
+      During my fourth year at INSA Hauts-de-France, I completed an internship at the Instituto Militar de Engenharia (IME) in Brazil. The main objective was to contribute to the development of a digital twin of the Computer Integrated Manufacturing (CIM) system at the MecatrIME laboratory.
+    </p>
+    <p>
+      My responsibilities included researching robotic kinematics, translating the kinematic model into a digital simulation, and integrating various components with ROS (Robot Operating System).
+    </p>
+
+    <h2>Methodology and Tools</h2>
+
+    <h3>Kinematic Modeling</h3>
+    <p>
+      The first stage focused on forward and inverse kinematics—understanding how joint angles relate to the position of a robotic arm’s end-effector. I applied the Denavit-Hartenberg (DH) convention to model the structure of the Motoman MH5F robotic arm, assigning coordinate frames and calculating homogeneous transformation matrices for each joint.
+    </p>
+
+    <!-- Image: DH Kinematic Model -->
+    <img src="dhmh5f.png" alt="Denavit-Hartenberg model" class="project-image" />
+
+    <p>
+      These transformations allowed me to generate an accurate DH representation of the robot, forming a foundation for motion planning, simulation, and control strategies.
+    </p>
+
+    <h3>Python IKPY Library</h3>
+    <p>
+      To begin simulating the robotic arm, I used the Python IKPY library to compute forward kinematics based on the DH parameters. This provided an initial visualization of the robot’s reach and joint behavior.
+    </p>
+
+    <!-- Image: IKPY Simulation -->
+    <img src="pythonikpy.png" alt="IKPY simulation output" class="project-image" />
+
+    <p>
+      However, to build a more comprehensive simulation—including environment interactions—we moved to ROS for advanced modeling and control.
+    </p>
+
+    <h3>ROS Integration and RViz Simulation</h3>
+    <p>
+      At Station 2 of the CIM line, the MH5F robotic arm performs automated tasks such as moving raw parts from a conveyor to a buffer and onto a CNC lathe. This requires highly precise spatial positioning and joint coordination.
+    </p>
+
+    <!-- Image: CIM Station Layout -->
+    <img src="station2.png" alt="CIM Station layout" class="project-image" />
+
+    <p>
+      I began by exporting the robotic arm model from SolidWorks to URDF and assembling it into a ROS package. After transferring the files to my ROS workspace, I configured them for Gazebo simulation and wrote the necessary launch files.
+    </p>
+
+ <!-- Image: CIM Station Layout -->
+    <img src="solidworks.png" alt="CIM Station layout" class="project-image" />
+
+
+    <p>
+      Using MoveIt and RViz, I implemented dynamic joint control. I recorded encoder values, converted them into radians, and simulated precise arm movements that matched the real industrial process.
+    </p>
+
+
+    <h2>Results</h2>
+    <p>
+      The simulation of Station 2 and its robotic components was successfully achieved. The setup successfully reflected key aspects of the physical station, and RViz provided useful visualizations of joint movements and kinematic paths.
+</p>
+    </p>
+    <p>
+      This digital twin helped improving understanding of the system’s behavior but also highlighted the potential for advanced features like collision avoidance and motion optimization in future iterations.
+    </p>
+
+    <!-- Back Button -->
+    <button class="back-btn" onclick="window.location.href='projects.html'">← Back to Projects</button>
+
+  </main>
+
+  <script src="lang.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project 9 – SWARMz4 Drone & Ship Battle Simulation</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background: #0a192f;
+      background-size: initial;
+      animation: none;
+    }
+    .project-container {
+      max-width: 900px;
+      margin: 6rem auto 2rem;
+      padding: 2rem;
+      color: #a0e7ff;
+    }
+    .project-container img {
+      width: 60%;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00e5ff66;
+      margin: 1.5rem auto;
+      display: block;
+    }
+    h1, h2 {
+      color: #00e5ff;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .back-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #00e5ff;
+      color: #0a192f;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+    .back-button:hover {
+      background-color: #00bcd4;
+    }
+  </style>
+</head>
+<body>
+  <header class="top-banner">
+    <div class="banner-content">
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About me</a>
+        <a href="projects.html">My projects</a>
+        <a href="cvmaha.pdf" target="_blank">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <div class="project-container">
+
+    <h1>SWARMz4 – Drone & Ship Battle Simulation</h1>
+
+    <h2>Project Overview</h2>
+    <p>
+     As part of a collaborative project with two colleagues, I worked on the 
+<strong>SWARMz4</strong> challenge, a simulation framework built in <strong>Gazebo</strong> for drone and carrier battle scenarios. 
+The environment simulated two opposing teams, each tasked with defending their own carrier while coordinating drone attacks on the enemy. 
+The core challenge was to integrate <strong>communication, detection, strategy, and autonomous decision-making</strong> into a realistic combat simulation.
+
+    </p>
+
+    <img src="dronebateau.png" alt="SWARMz4 Architecture" style="width:90%; display:block; margin:1rem auto; border-radius:12px; box-shadow:0 0 15px #00e5ff66;"/>
+    
+
+    <h2>Technical Implementation</h2>
+    <p>
+      The system was implemented in <strong>ROS2</strong> and <strong>Gazebo Garden</strong>, with integration of 
+      <strong>PX4 Autopilot</strong> for flight control and <strong>QGroundControl</strong> for mission management. 
+      We worked with ROS2 topics, services, and actions to manage communication, detection, and attacks between robots.
+    </p>
+
+    <p>
+      My team and I first designed a <strong>Qt-based interface</strong> to visualize test results and improve 
+      the monitoring of drone states during simulation. This interface gave us a clearer overview of detection, communication, 
+      and missile launches, helping us refine our strategies.
+    </p>
+
+    <img src="qtdesignerdeux.png" alt="Qt Strategy Interface" style="width:90%; display:block; margin:1rem auto; border-radius:12px; box-shadow:0 0 15px #00e5ff66;"/>
+
+  <h2>Strategy Development</h2>
+<p>
+  Our strategy relied on autonomous drones using a <strong>reward-based system</strong> to decide between three actions: 
+  move, fire, or perform a kamikaze explosion. Each drone evaluated the context — enemy proximity, distance, ammo, and ally support — 
+  to select the most effective response. The flagship remained static in a corner for protection, acting purely as a defensive unit with 
+  long-range detection and missile fire. This hybrid approach balanced local autonomy with team-level defense to protect the flagship 
+  while neutralizing threats.
+</p>
+<img src="qground.png" alt="SWARMz4 Architecture" />
+
+
+    <h2>Final Outcome</h2>
+    <p>
+      The simulation successfully demonstrated autonomous drone-carrier battles with integrated physics, detection, 
+      communication, and combat mechanics. This project highlighted my ability to work in a team, combine <strong>ROS2 
+      simulation, GUI design, and strategic planning</strong>, and contribute to a complex multi-agent system.
+    </p>
+
+    <!-- Back Button -->
+    <a href="projects.html" class="back-button">← Back to Projects</a>
+  </div>
+
+</body>
+</html>
