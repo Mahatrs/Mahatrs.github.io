@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RAAD 2026 – Optimization of Robot Base Placement</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+
+  body {
+    background: #0a192f !important;
+    background-size: initial !important;
+    animation: none !important;
+  }
+
+    .project-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #caf0f8;
+    }
+
+.project-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* ratio 16:9 */
+  height: 0;
+  margin-bottom: 2rem;
+}
+
+.project-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00e5ff44;
+}
+
+
+    .project-container h1 {
+      color: #00e5ff;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .project-container h2 {
+      color: #00e5ff;
+      margin-top: 2rem;
+    }
+
+    .project-container p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
+
+    .project-image {
+      width: 100%;
+      max-width: 700px;
+      border-radius: 10px;
+      margin: 2rem auto;
+      display: block;
+      box-shadow: 0 0 15px #00e5ff33;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background: transparent;
+      border: 2px solid #00e5ff;
+      color: #a0e7ff;
+      padding: 0.6rem 1.4rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: #00e5ff;
+      color: #0a192f;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header class="top-banner">
+  <div class="banner-content">
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About me</a>
+      <a href="projects.html">My projects</a>
+      <a href="cvmaha.pdf" target="_blank">Resume</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="project-container">
+
+  <!-- Replace this image with a picture of your presentation -->
+      <div class="project-video">
+      <iframe 
+        src="https://www.youtube.com/embed/adwtfMT2r1c" 
+        title="Autonomous Navigation with TurtleBot2 & ROS"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  <h1>RAAD 2026 – Optimization of Robot Base Placement for Robot-Assisted Prostate Biopsy Planning</h1>
+
+  <h2>Context</h2>
+
+  <p>
+    During my internship at the <strong>Regional Center of Excellence for Robotic Technology (CRTA)</strong> in Zagreb, Croatia, I contributed to a research project focused on robot-assisted medical procedures. This work resulted in a scientific paper entitled <em>"Optimization of Robot Base Placement for a Robot-Assisted Prostate Scanning and Biopsy Planning System"</em>.
+  </p>
+
+  <p>
+    I had the opportunity to present this research at the <strong>35th International Conference on Robotics in the Alpe-Adria-Danube Region (RAAD 2026)</strong>, held in Bratislava, Slovakia. Presenting our work to researchers and robotics professionals was a valuable experience that allowed me to communicate the project's objectives, methodology, and results.
+  </p>
+
+  <h2>Research Overview</h2>
+
+  <p>
+    In robot-assisted prostate biopsy procedures, the position of the robotic manipulator relative to the patient has a major impact on the robot's ability to reach target locations safely and efficiently. Poor robot placement may reduce dexterity, limit workspace accessibility, or force the robot to operate close to kinematic singularities and joint limits.
+  </p>
+
+  <p>
+    Our work investigated several complementary approaches to optimize the robot base placement for a <strong>KUKA LBR iiwa</strong> used in prostate scanning and biopsy planning. The study combined:
+  </p>
+
+  <ul style="text-align:left; max-width:800px; margin:auto; line-height:1.8;">
+      <li>Reachability and manipulability analysis using capability maps.</li>
+      <li>Robot base optimization using a Genetic Algorithm.</li>
+      <li>Kinematic evaluation under simulated patient motion to improve robustness.</li>
+  </ul>
+
+  <!-- Optional figure -->
+ 
+
+  <h2>Results</h2>
+
+  <p>
+    The proposed optimization framework enables a systematic selection of the robot base position instead of relying on empirical setup. By combining workspace analysis with optimization techniques, the method significantly improves robot performance during the medical procedure while increasing robustness to patient motion.
+  </p>
+
+  <p>
+    The optimized configuration achieved a <strong>72% increase in reachable target configurations</strong>, demonstrating the effectiveness of the proposed methodology for robot-assisted prostate biopsy planning.
+  </p>
+
+  <h2>Publication</h2>
+
+  <p>
+    The complete research paper is available through Springer and can be accessed using the link below:
+  </p>
+
+  <a class="paper-link"
+     href="https://www.researchgate.net/publication/408517459_Optimization_of_Robot_Base_Placement_for_Prostate_Biopsy_Planning"
+     target="_blank">
+     📄 Read the Full Paper
+  </a>
+
+  <br>
+
+  <button class="back-btn" onclick="window.location.href='projects.html'">
+      ← Back to Projects
+  </button>
+
+</main>
+
+<script src="lang.js"></script>
+
+</body>
+</html>
